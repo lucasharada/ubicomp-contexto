@@ -73,27 +73,24 @@ public class SupportHTTPClient {
     public static void main(String args[]) throws Exception {
     	BasicConfigurator.configure();
     	SupportHTTPClient client = new SupportHTTPClient();
-        
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "500", "timeOfReading",new Date().toString());
+
+    	client.request(8085, "sendevent", "stream", "HumidityEvent", "humidity", "0.50");
+    	client.request(8085, "sendevent", "stream", "HumidityEvent", "humidity", "0.40");
+    	client.request(8085, "sendevent", "stream", "HumidityEvent", "humidity", "0.30");
+    	client.request(8085, "sendevent", "stream", "HumidityEvent", "humidity", "0.20");
+    	client.request(8085, "sendevent", "stream", "HumidityEvent", "humidity", "0.10");
+    	client.request(8085, "sendevent", "stream", "LuminosityEvent", "luminosity", "0.50");
+    	client.request(8085, "sendevent", "stream", "LuminosityEvent", "luminosity", "0.60");
+    	client.request(8085, "sendevent", "stream", "LuminosityEvent", "luminosity", "0.70");
+    	client.request(8085, "sendevent", "stream", "LuminosityEvent", "luminosity", "0.80");
+    	client.request(8085, "sendevent", "stream", "LuminosityEvent", "luminosity", "0.90");
     	client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "50");
         client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "60");
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "60");
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "50");
-    	
-    	
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "50");
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "81");
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "81");
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "50");
-        
-    	client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "101");
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "102");
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "103");
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "155");
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "50");
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "500");
-        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "500");
-
+        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "70");
+        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "80");
+        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "90");
+        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "100");
+        client.request(8085, "sendevent", "stream", "TemperatureEvent", "temperature", "110");
     }
 
 

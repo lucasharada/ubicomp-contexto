@@ -1,24 +1,27 @@
 package org.ubicomp.event;
 
-import java.util.Date;
-
 public class HumidityEvent {
 
 	private double humidity;
 
-	private Date timeOfReading;
+	private String timeOfReading;
 
-	public HumidityEvent(double humidity, Date timeOfReading) {
-		this.humidity = humidity;
-		this.timeOfReading = timeOfReading;
-	}
+	public HumidityEvent() {}
 
 	public double getHumidity() {
 		return humidity;
 	}
 
-	public Date getTimeOfReading() {
+	public String getTimeOfReading() {
 		return timeOfReading;
+	}
+
+	public void setHumidity(double humidity) {
+		this.humidity = humidity;
+	}
+
+	public void setTimeOfReading(String timeOfReading) {
+		this.timeOfReading = timeOfReading;
 	}
 
 	@Override

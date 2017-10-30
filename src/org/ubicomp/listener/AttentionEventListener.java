@@ -14,6 +14,7 @@ public class AttentionEventListener implements UpdateListener {
         					" HumidityEvent.std:lastevent() AS humidity,"+ 
         					" LuminosityEvent.std:lastevent() AS luminosity" +
         					" WHERE temperature > 50 AND humidity < 0.30 AND luminosity > 0.80";
+        
         EPStatement statement = EsperHttpInputAdapter.epService.getEPAdministrator().createEPL(expression);
         statement.addListener(this);
 	}

@@ -1,6 +1,5 @@
 package org.ubicomp.event;
 
-
 public class TemperatureEvent {
 
 	private double temperature;

@@ -12,6 +12,7 @@ public class WarningEventListener implements UpdateListener {
         String expression = "SELECT *" +
         					" FROM TemperatureEvent.std:lastevent() AS temperature, HumidityEvent.std:lastevent() AS humidity" +
         					" WHERE temperature > 80 AND humidity < 0.15";
+        
         EPStatement statement = EsperHttpInputAdapter.epService.getEPAdministrator().createEPL(expression);
         statement.addListener(this);
 	}

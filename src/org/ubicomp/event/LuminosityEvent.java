@@ -1,24 +1,27 @@
 package org.ubicomp.event;
 
-import java.util.Date;
-
 public class LuminosityEvent {
 
 	private double luminosity;
 
-	private Date timeOfReading;
+	private String timeOfReading;
 
-	public LuminosityEvent (double luminosity, Date timeOfReading) {
-		this.luminosity = luminosity;
-		this.timeOfReading = timeOfReading;
-	}
+	public LuminosityEvent () {}
 
 	public double getLuminosity() {
 		return luminosity;
 	}
 
-	public Date getTimeOfReading() {
+	public String getTimeOfReading() {
 		return timeOfReading;
+	}
+	
+	public void setLuminosity(double luminosity) {
+		this.luminosity = luminosity;
+	}
+
+	public void setTimeOfReading(String timeOfReading) {
+		this.timeOfReading = timeOfReading;
 	}
 
 	@Override
